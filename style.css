@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🌈 Animated Background */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background span {
+    position: absolute;
+    font-size: 40px;
+    opacity: 0.15;
+    animation: floatIcons 25s linear infinite;
+    bottom: -100px;
+    filter: grayscale(100%);
+}
+
+/* Different positions & speeds */
+.background span:nth-child(1) { left: 5%; animation-duration: 22s; }
+.background span:nth-child(2) { left: 15%; animation-duration: 30s; }
+.background span:nth-child(3) { left: 30%; animation-duration: 26s; }
+.background span:nth-child(4) { left: 45%; animation-duration: 20s; }
+.background span:nth-child(5) { left: 55%; animation-duration: 28s; }
+.background span:nth-child(6) { left: 65%; animation-duration: 24s; }
+.background span:nth-child(7) { left: 75%; animation-duration: 32s; }
+.background span:nth-child(8) { left: 85%; animation-duration: 21s; }
+.background span:nth-child(9) { left: 95%; animation-duration: 35s; }
+
+@keyframes floatIcons {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.1;
+    }
+    100% {
+        transform: translateY(-1200px) rotate(360deg);
+        opacity: 0.25;
+    }
+}
+
+/* 🧊 Glassmorphism Container */
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    color: white;
+    z-index: 1;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #ff9800;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+li {
+    background: rgba(255,255,255,0.25);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
